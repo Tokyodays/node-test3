@@ -1,0 +1,2 @@
+{"ts":1362906775503,"silentsave":true,"restoring":false,"patch":[[]],"length":0}
+{"contributors":[],"silentsave":false,"ts":1362907064225,"patch":[[{"diffs":[[1,"<form method=\"POST\" action=\"/create\">\r\n <fieldset>\r\n  <p><label>text</label><input type=\"text\" name=\"text\"></p>\r\n </fieldset>\r\n <input type=\"submit\" value=\"Post\">\r\n</form>"]],"start1":0,"start2":0,"length1":0,"length2":171}]],"length":171,"saved":false}

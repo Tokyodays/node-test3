@@ -7,5 +7,11 @@
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+    <p><a href="/form">New Entry</a></p>
+<ul>
+<% items.forEach(function(item){ %>
+  <li><%= item.text %></li>
+<% }) %>
+</ul>
   </body>
 </html>

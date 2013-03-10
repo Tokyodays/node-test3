@@ -1,1 +1,1 @@
-web: node firstapp/app.js
+web: node app.js

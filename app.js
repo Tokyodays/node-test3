@@ -2,6 +2,7 @@
 /**
  * Module dependencies.
  */
+process.env.PWD = process.cwd();
 
 var express = require('express')
   , routes = require('./routes')
@@ -22,7 +23,7 @@ app.configure(function(){
   app.use(app.router);
   app.use(express.static(path.join(__dirname, 'public')));
   
-  process.env.PWD = process.cwd();
+  
   app.use('/stylesheets',express.static(process.env.PWD+'/stylesheets'));
 });
 

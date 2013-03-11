@@ -9,3 +9,4 @@
 {"ts":1363023978916,"patch":[[{"diffs":[[0,");\n  \n  "],[-1,"console.log"],[1,"alert"],[0,"(__dirna"]],"start1":606,"start2":606,"length1":27,"length2":21}]],"length":1091,"saved":false}
 {"ts":1363023995346,"patch":[[{"diffs":[[0," \n  "],[-1,"alert"],[1,"console.dir"],[0,"(__d"]],"start1":610,"start2":610,"length1":13,"length2":19}]],"length":1097,"saved":false}
 {"ts":1363024024942,"patch":[[{"diffs":[[0,"ole.dir("],[-1,"__dirname"],[1,"path.join(__dirname, 'public')"],[0,");\n  app"]],"start1":618,"start2":618,"length1":25,"length2":46}]],"length":1118,"saved":false}
+{"ts":1363024128356,"patch":[[{"diffs":[[0,"\n  \n"],[-1,"  console.dir(path.join(__dirname, 'public'));\n"],[0,"  ap"]],"start1":608,"start2":608,"length1":55,"length2":8},{"diffs":[[0,";\n  "],[-1,"//"],[0,"app."]],"start1":684,"start2":684,"length1":10,"length2":8}]],"length":1069,"saved":false}

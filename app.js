@@ -23,9 +23,8 @@ app.configure(function(){
   app.use(app.router);
   app.use(express.static(path.join(__dirname, 'public')));
   
-  console.dir(path.join(__dirname, 'public'));
   app.use('/stylesheets',express.static(process.env.PWD+'/stylesheets'));
-  //app.use(express.static(__dirname));
+  app.use(express.static(__dirname));
 });
 
 app.configure('development', function(){

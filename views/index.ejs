@@ -5,7 +5,7 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
 <script src="/socket.io/socket.io.js"></script>
 <script>
-  var socket = io.connect('http://node-test3.tokyodays.c9.io');
+  var socket = io.connect('http://limitless-sea-5666.herokuapp.com/');
   socket.on('news', function (data) {
     console.log(data);
     socket.emit('my other event', { my: 'data' });

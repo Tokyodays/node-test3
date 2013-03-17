@@ -43,8 +43,8 @@ app.post('/create', routes.create);
 
 var about_handler = require('./routes/about');
 app.get('/about/:id?.:format?', about_handler.index);
-app.set('some_value', '1') //設定
-console.log(app.set('some_value')) //取得
+app.set('some_value', '1'); //設定
+console.log(app.set('some_value')); //取得
 
 /*
 var fs = require('fs')
@@ -100,6 +100,17 @@ var map_routes = function(dir) {
 };
 map_routes(routes_dir);
 */
-http.createServer(app).listen(app.get('port'), function(){
+
+var server = http.createServer(app);
+server.listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
+});
+
+var io = require('socket.io').listen(server);
+
+io.sockets.on('connection', function (socket) {
+  socket.emit('news', { hello: 'world' });
+  socket.on('my other event', function (data) {
+    console.log(data);
+  });
 });

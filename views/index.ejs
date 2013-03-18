@@ -3,19 +3,28 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="/socket.io/socket.io.js"></script>
+<script type="text/javascript" src="/javascripts/chat.js"></script>
+
 <script>
+/*
   var socket = io.connect('http://limitless-sea-5666.herokuapp.com/');
   socket.on('news', function (data) {
     console.log(data);
     socket.emit('my other event', { my: 'data' });
   });
+  */
 </script>
 </head>
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
     <p><a href="/about">about</a></p>
+     <input type="text" name="message" id="message" />
+    <button id="btn">送信</button>
+    <dl id="list"></dl>
+
 <ul>
 <% items.forEach(function(item){ %>
   <li><%= item.text %></li>

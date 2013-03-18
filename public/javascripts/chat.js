@@ -6,7 +6,7 @@ $(function() {
 	
 	$('#btn').click(function() {
 		var message = $('#message');
-		console.log(message);
+		console.log(message.val());
 		//サーバーにメッセージを引数にイベントを実行する
 		socket.emit('msg send', message.val());
 	});

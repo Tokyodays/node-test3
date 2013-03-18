@@ -107,10 +107,26 @@ server.listen(app.get('port'), function(){
 });
 
 var io = require('socket.io').listen(server);
+//var io = require('socket.io').listen(app);
+io.sockets.on('connection', function (socket) {
+    //クライアント側からのイベントを受け取る。
+    socket.on('msg send', function (msg) {
+        //イベントを実行した方に実行する
+        socket.emit('msg push', msg);
+        //イベントを実行した方以外に実行する
+        socket.broadcast.emit('msg push', msg);
+    });
+    //接続が解除された時に実行する
+    socket.on('disconnect', function() {
+        console.log('disconnected');
+    });
+});
 
+/*
 io.sockets.on('connection', function (socket) {
   socket.emit('news', { hello: 'world' });
   socket.on('my other event', function (data) {
     console.log(data);
   });
 });
+*/

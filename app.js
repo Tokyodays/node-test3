@@ -37,13 +37,16 @@ app.locals({
 });
 
 app.get('/', routes.index);
-app.get('/fusion', routes.fusion);
 app.get('/users', user.list);
 app.get('/form', routes.form);
 app.post('/create', routes.create);
 
 var about_handler = require('./routes/about');
 app.get('/about/:id?.:format?', about_handler.index);
+
+var fusion_handler = require('./routes/fusion');
+app.get('/fusion', fusion_handler.index);
+
 app.set('some_value', '1'); //設定
 console.log(app.set('some_value')); //取得
 

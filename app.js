@@ -37,6 +37,7 @@ app.locals({
 });
 
 app.get('/', routes.index);
+app.get('/fusion', routes.fusion);
 app.get('/users', user.list);
 app.get('/form', routes.form);
 app.post('/create', routes.create);
@@ -107,7 +108,7 @@ server.listen(app.get('port'), function(){
 });
 
 var io = require('socket.io').listen(server);
-//var io = require('socket.io').listen(app);
+
 io.sockets.on('connection', function (socket) {
     //クライアント側からのイベントを受け取る。
     socket.on('msg send', function (msg) {

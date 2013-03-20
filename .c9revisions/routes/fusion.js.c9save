@@ -1,0 +1,2 @@
+{"ts":1363738478235,"silentsave":true,"restoring":false,"patch":[[]],"length":0}
+{"contributors":[],"silentsave":false,"ts":1363738698928,"patch":[[{"diffs":[[1,"\r\nvar app = module.parent.exports;\r\n\r\nexports.index = function(req, res){\r\n    res.render('fusion');\r\n};"]],"start1":0,"start2":0,"length1":0,"length2":104}]],"length":104,"saved":false}

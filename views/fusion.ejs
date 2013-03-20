@@ -35,6 +35,7 @@
       // Initialize the client, set onclick listeners.
       function initialize() {
         gapi.client.setApiKey(apiKey);
+        document.getElementById('list-table').onclick = listTable;
         document.getElementById('create-table').onclick = createTable;
         document.getElementById('insert-data').onclick = insertData;
         document.getElementById('select-data').onclick = selectData;
@@ -61,6 +62,15 @@
           authorizeButton.disabled = false;
           authorizeButton.onclick = function() { auth(false); return false; };
         }
+      }
+      
+      function listTable(){
+        runClientRequest({
+          path: '/fusiontables/v1/tables',
+          method: 'GET'
+        }, function(res){
+          console.dir(res);
+        });
       }
 
       // Run a request to create a new Fusion Table.
@@ -162,6 +172,12 @@
       already authorized, the button will be disabled.
     </p>
     <input type="button" id="authorize-button" value="Authorize"><br>
+    
+    <h2>
+    list table
+    
+    </h2>
+    <input type="button" id="list-button" value="list table">
 
     <h2>
       (2) Create Table

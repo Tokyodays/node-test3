@@ -67,9 +67,9 @@
       function listTable(){
         runClientRequest({
           path: '/fusiontables/v1/tables',
-          method: 'GET'
+          method: 'POST'
         }, function(res){
-          console.dir(res);
+          console.dir(JSON.stringify(res););
         });
       }
 
